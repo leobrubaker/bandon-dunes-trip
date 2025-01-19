@@ -8,59 +8,56 @@
   <header>
     <h1>Bandon Dunes Birthday Bash</h1>
     <nav>
-      <a href="#about">About</a>
-      <a href="#itinerary">Itinerary</a>
-      <a href="#courses">Courses</a>
-      <a href="#competition">Competition</a>
-      <a href="#photos">Photos</a>
-    </nav>
+      <a href="#about">About</a>  
+      <a href="#itinerary">Itinerary</a>  
+      <a href="#courses">Courses</a>  
+      <a href="#competition">Competition</a>  
+      <a href="#photos">Photos</a>  
+    </nav>  
   </header>
 
-  <section id="about">
-    <h2>Celebrating the Big 5-0 at Bandon Dunes!</h2>
-    <p>Join us as we celebrate Andy, Kevin, and Jeremy's 50th birthdays with an epic golf trip to Bandon Dunes. </p>
-    </section>
+  <section id="about">  
+    <h2>Celebrating the Big 5-0 at Bandon Dunes!</h2>  
+    <p>Join us as we celebrate Andy, Kevin, and Jeremy's 50th birthdays with an epic golf trip to Bandon Dunes. </p>  
+  </section>  
 
-  <section id="itinerary">
-    <h2>Itinerary</h2>
-    </section>
+  <section id="itinerary">  
+    <h2>Itinerary</h2>  
+  </section>  
 
-  <section id="courses">
-    <h2>Courses</h2>
-  </section>
+  <section id="courses">  
+    <h2>Courses</h2>  
+  </section>  
 
-  <section id="competition">
-    <h2>Competition</h2>
-    </section>
+  <section id="competition">  
+    <h2>Competition</h2>  
+  </section>  
 
-  <section id="photos">
-    <h2>Photos</h2>
-    </section>
+  <section id="photos">  
+    <h2>Photos</h2>  
+  </section>  
 
-  <script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-auth-compat.js"></script>
-  <script src="script.js"></script> 
+  <script src="script.js"></script>  
 
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+    import { getAuth } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js"; // Import auth
 
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyCxGD1ZyCegaXf7eB6_YmUoddCGG7dIEQw",
-    authDomain: "bandon-dunes-trip.firebaseapp.com",
-    projectId: "bandon-dunes-trip",
-    storageBucket: "bandon-dunes-trip.firebasestorage.app",
-    messagingSenderId: "4652080154",
-    appId: "1:4652080154:web:bca9be3964d415360645a3"
-  };
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCxGD1ZyCegaXf7eB6_YmUoddCGG7dIEQw",
+      authDomain: "bandon-dunes-trip.firebaseapp.com",
+      projectId: "bandon-dunes-trip",
+      storageBucket: "bandon-dunes-trip.firebasestorage.app",
+      messagingSenderId: "4652080154",
+      appId: "1:4652080154:web:bca9be3964d415360645a3"
+    };
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-</script>
-
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app); // Initialize auth
+  </script>
 
 </body>
 </html>
