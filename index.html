@@ -1,60 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Bandon Dunes Birthday Bash</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Golf Trip</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js"></script>
+  <script src="firebase-config.js"></script>
 </head>
 <body>
   <header>
-    <h1>Bandon Dunes Birthday Bash</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#itinerary">Itinerary</a>
-      <a href="#courses">Courses</a>
-      <a href="#competition">Competition</a>
-      <a href="#photos">Photos</a>
-    </nav>
+    <h1>Kevin, Jeremy & Andy's 50th Birthday Golf Trip</h1>
+    <div id="auth-section">
+      <button id="login-btn">Login</button>
+      <button id="logout-btn" style="display: none;">Logout</button>
+    </div>
   </header>
 
-  <section id="about">
-    <h2>Celebrating the Big 5-0 at Bandon Dunes!</h2>
-    <p>Join us as we celebrate Andy, Kevin, and Jeremy's 50th birthdays with an epic golf trip to Bandon Dunes. </p>
-  </section>
+  <main id="content">
+    <section id="welcome" class="page-section">
+      <h2>Welcome</h2>
+      <p>We're thrilled to celebrate this special milestone with a golf adventure to Bandon Dunes!</p>
+    </section>
 
-  <section id="itinerary">
-    <h2>Itinerary</h2>
-  </section>
+    <section id="courses" class="page-section">
+      <h2>The Courses</h2>
+      <p>Explore the stunning courses of Bandon Dunes, a golfer's paradise.</p>
+    </section>
 
-  <section id="courses">
-    <h2>Courses</h2>
-  </section>
+    <section id="players" class="page-section">
+      <h2>The Players</h2>
+      <p>Meet Kevin, Jeremy, Andy, and Leo, the honorary guest!</p>
+    </section>
 
-  <section id="competition">
-    <h2>Competition</h2>
-  </section>
+    <section id="logistics" class="page-section">
+      <h2>Logistics</h2>
+      <p>Details about accommodations, transportation, and more.</p>
+    </section>
 
-  <section id="photos">
-    <h2>Photos</h2>
-  </section>
+    <section id="itinerary" class="page-section">
+      <h2>Itinerary</h2>
+      <p>Check out our daily schedule for the trip.</p>
+    </section>
+  </main>
 
-  <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
-    import { getAuth } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
-
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyCxGD1ZyCegaXf7eB6_YmUoddCGG7dIEQw",
-      authDomain: "bandon-dunes-trip.firebaseapp.com",
-      projectId: "bandon-dunes-trip",
-      storageBucket: "bandon-dunes-trip.firebasestorage.app",
-      messagingSenderId: "4652080154",
-      appId: "1:4652080154:web:bca9be3964d415360645a3"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-  </script>
+  <script src="app.js"></script>
 </body>
 </html>
