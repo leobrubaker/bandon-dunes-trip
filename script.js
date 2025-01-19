@@ -16,4 +16,31 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-// Rest of your login and signup functions
+// Your login and signup functions
+function login() {
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  auth.signInWithEmailAndPassword(email, password)
+    .then(userCredential => {
+      console.log('User logged in:', userCredential.user);
+      // Redirect to protected page or update UI
+    })
+    .catch(error => {
+      console.error('Login error:', error);
+      // Display an error message to the user
+    });
+}
+
+function signup() {
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  auth.createUserWithEmailAndPassword(email, password)
+    .then(userCredential => {
+      console.log('User created:', userCredential.user);
+      // Redirect to login page or update UI
+    })
+    .catch(error => {
+      console.error('Signup error:', error);
+      // Display an error message to the user
+    });
+}
