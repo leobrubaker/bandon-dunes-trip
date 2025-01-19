@@ -37,6 +37,30 @@
     <h2>Photos</h2>
     </section>
 
+  <script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.17.2/firebase-auth-compat.js"></script>
   <script src="script.js"></script> 
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyCxGD1ZyCegaXf7eB6_YmUoddCGG7dIEQw",
+    authDomain: "bandon-dunes-trip.firebaseapp.com",
+    projectId: "bandon-dunes-trip",
+    storageBucket: "bandon-dunes-trip.firebasestorage.app",
+    messagingSenderId: "4652080154",
+    appId: "1:4652080154:web:bca9be3964d415360645a3"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
+
+
 </body>
 </html>
